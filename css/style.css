@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* hover me transition */
+/* cutomizing transitions on heading*/
+/* transition property and transition durtion instead of transition*/
+.heading{
+    color: darkblue;
+    font-size: 15px;
+    /* transition: all 0.5s; */
+    transition-property: font-size;
+    transition-duration: 0.5s;
+    /* transition-delay: 1s; */
+    transition-timing-function: ease-in;
+    /*transition short hand --->
+    transition: property duration timing delay;
+    transition: font-size 0.5s ease-in 1s
+    --helps with browser compatibility--
+    */
+}
+.heading:hover{
+    color: green;
+    font-size: 20px;
+}
+/*transition heading ends*/
+/*box animations-creation of animations
+-->from and to instead of percentages
+-->add animation timings : name,duration,..animation-delay,aniamtion-iteration-count
+-->timing,direction etc : timingfn,direction property,animation-fill-mode--->after animation is completed what to do depends on other ppties 
+*/
+.box{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid black;
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-direction: reverse;
+
+    animation-fill-mode: both;
+    /*
+    animation: name,durtion,timingfn,delay,iterationcount,direction;
+    aniamtion: grow 2s ease 1s 1 reverse;
+    fillmode should be added on top of short hand..
+    */
+}
+@keyframes grow{
+    0%{
+        width: 50px;
+        height: 50px;
+        background-color: red;
+    }
+    50%{
+        width: 100px;
+        height: 50px;
+        background-color: blue;
+    }
+    100%{
+        width: 50px;
+        height: 100px;
+        background-color: green;
+    }
+}
+/*box animation ends*/
+
+
