@@ -67,5 +67,47 @@
     }
 }
 /*box animation ends*/
+/*effects--> transitions and other methods
+transform: scale,translate
+*/
+.box2{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation-name: transform;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes transform{
+    100%{
+        /* transform: scale(2,0.5); */
+        /*scaleX(),scaleY()*/
+        /*transform: translate(-10%,50%); */
+        /* transform: translate(50%,25%); */
+        /* transform: rotate(180deg); */
+        transform: skewY(50deg);
+        /* skew(x,y) */
+        /* shortcut---> transform: scale() rotate() translate(); */
+    }
+}
+/*methods end*/
+/*prefixes*/
+/* -webkit-animation: :tablet,chrome
+--ms-animation-ie,microsoft,-moz-animatiom,-o-animation-opera-->for browser compatibility 
+*/
+/* css variables 
+:root{
+    --box-unit: 50px;
+    --main-color: #290000;
+}
+assignments --> width: var(--box-unit),background-color: var(--main-color);
+*/
+/* custom timing functions cubic-bezier */
 
+/****** ends******/
 
